@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abrasileirado — Ecossistema de Bibliotecas e Validações Brasileiras</title>
+  <meta name="description" content="Ecossistema de bibliotecas e utilitários em Python, Django, PHP, Java, JS, Rust e C para validação de dados e objetos de domínio brasileiros.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-badge">🇧🇷</span>
+        <span>Abrasileirado</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#componentes">Componentes</a></li>
+          <li><a href="#inicio-rapido">Início Rápido</a></li>
+          <li><a href="#arquitetura">Arquitetura</a></li>
+          <li><a href="https://github.com/abrasileirado" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <span class="hero-tag">Ecossistema Multi-Linguagem</span>
+        <h1>Validação e manipulação de dados brasileiros com simplicidade</h1>
+        <p>Bibliotecas, tipos de domínio e utilitários de alta performance para tratamento de CPF, CNPJ, CEP, Inscrição Estadual e conversão de dados DATASUS (DBC/DBF).</p>
+        <div class="hero-buttons">
+          <a href="#componentes" class="btn btn-primary">Explorar Componentes</a>
+          <a href="https://github.com/abrasileirado" class="btn btn-secondary" target="_blank" rel="noopener">Acessar no GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Componentes Section -->
+    <section id="componentes">
+      <h2 class="section-title">Componentes da Suíte</h2>
+      <p class="section-subtitle">Conheça os módulos e bibliotecas mantidos pela organização Abrasileirado:</p>
+
+      <div class="grid">
+        <!-- Python -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">🐍</span>
+              <h3 class="card-title">python_abrasileirado</h3>
+            </div>
+            <p class="card-description">Biblioteca Python para validação, formação e geração de objetos de domínio brasileiros (CPF, CNPJ, CEP, etc.).</p>
+          </div>
+          <a href="https://github.com/abrasileirado/python_abrasileirado" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- Django -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">🎯</span>
+              <h3 class="card-title">django_abrasileirado</h3>
+            </div>
+            <p class="card-description">Extensão para o framework Django contendo ModelFields e FormFields nativos para tipos de dados brasileiros.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/django_abrasileirado" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- PHP -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">🐘</span>
+              <h3 class="card-title">php_abrasileirado</h3>
+            </div>
+            <p class="card-description">Pacote PHP nativo com enums, exceptions e validações rigorosas para documentos e regras brasileiras.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/php_abrasileirado" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- Java -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">☕</span>
+              <h3 class="card-title">java_abrasileirado</h3>
+            </div>
+            <p class="card-description">Biblioteca Java para integração em ambientes corporativos e ecossistema Spring/Java SE.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/java_abrasileirado" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">⚡</span>
+              <h3 class="card-title">javascript_abrasileirado</h3>
+            </div>
+            <p class="card-description">Validações e máscaras para aplicações Frontend (React, Vue, Angular) e Node.js backend.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/javascript_abrasileirado" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- dbc2dbf -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">🦀</span>
+              <h3 class="card-title">dbc2dbf</h3>
+            </div>
+            <p class="card-description">Utilitário de linha de comando de altíssima velocidade escrito em Rust para descompactar arquivos DATASUS DBC em DBF.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/dbc2dbf" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- blast-dbf -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">⚡</span>
+              <h3 class="card-title">blast-dbf</h3>
+            </div>
+            <p class="card-description">Biblioteca e utilitário CLI em C focado em descompactar e extrair dados de arquivos DBC/DBF com footprint mínimo de memória.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/blast-dbf" class="card-link" target="_blank">Ver Repositório &rarr;</a>
+        </div>
+
+        <!-- Workspace -->
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-icon">💼</span>
+              <h3 class="card-title">workspace</h3>
+            </div>
+            <p class="card-description">Repositório privado de orquestração de ambiente de desenvolvimento local, containers Docker e scripts CLI.</p>
+          </div>
+          <a href="https://github.com/abrasileirado/workspace" class="card-link" target="_blank">Ver Repositório (Privado) &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Início Rápido -->
+    <section id="inicio-rapido">
+      <h2 class="section-title">Guia de Início Rápido para Desenvolvedores</h2>
+      <p class="section-subtitle">Configurando o ambiente unificado de desenvolvimento via CLI <code>abrasileirado</code>:</p>
+
+      <div class="code-box">
+        <pre># 1. Clone o repositório workspace privado
+git clone git@github.com:abrasileirado/workspace.git ~/projetos/PESSOAL/abrasileirado/workspace
+
+# 2. Acesse o diretório do workspace
+cd ~/projetos/PESSOAL/abrasileirado/workspace
+
+# 3. Execute o setup inicial (clona repositórios e configura variáveis)
+./abrasileirado setup
+
+# 4. Abra o workspace unificado no VS Code
+code abrasileirado.code-workspace
+
+# 5. Inicie o ambiente Docker
+abrasileirado launch</pre>
+      </div>
+    </section>
+
+    <!-- Arquitetura -->
+    <section id="arquitetura">
+      <h2 class="section-title">Arquitetura da Organização</h2>
+      <p class="section-subtitle">Visão geral do padrão de repositórios e segregação de responsabilidades:</p>
+
+      <div class="card" style="margin-top: 1rem;">
+        <p style="color: var(--text-muted);">
+          A organização <strong>Abrasileirado</strong> é mantida sob um modelo modular onde cada repositório atende a uma linguagem ou responsabilidade específica. 
+          O desenvolvimento local é centralizado no repositório privado <code>workspace</code>, garantindo que o ambiente Docker e os atalhos de desenvolvimento não poluam o código-fonte público de cada biblioteca.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="hero-container">
+      <p>© 2026 Organização Abrasileirado. Código aberto sob licença MIT.</p>
+      <p style="margin-top: 0.5rem;"><a href="https://github.com/abrasileirado">github.com/abrasileirado</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
