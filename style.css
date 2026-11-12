@@ -183,15 +183,15 @@ section {
 }
 
 .group-title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: 0.5rem;
+  margin: 4rem 0 1.75rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border-color);
   color: var(--text-main);
 }
 
-.group-title:first-of-type {
+.section-subtitle + .group-title {
   margin-top: 0;
 }
 
