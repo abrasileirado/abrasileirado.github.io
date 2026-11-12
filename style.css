@@ -59,10 +59,10 @@ header {
 }
 
 .logo-badge {
-  background: var(--gradient-hero);
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
-  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: block;
 }
 
 nav ul {
