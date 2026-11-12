@@ -6,188 +6,165 @@
   <title>Abrasileirado — Ecossistema de Bibliotecas e Validações Brasileiras</title>
   <meta name="description" content="Ecossistema de bibliotecas e utilitários em Python, Django, PHP, Java, JS, Rust e C para validação de dados e objetos de domínio brasileiros.">
   <link rel="icon" type="image/png" href="logo.png">
-  <link rel="stylesheet" href="style.css?v=4">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tema dsgovbr-bootstrapped (Bootstrap 5 com o visual do GOV.BR DS) e fonte Rawline, copiados do site do projeto -->
+  <link rel="stylesheet" href="assets/fonts/rawline/rawline.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/dsgovbr-bootstrapped.css">
+  <!-- modo claro/escuro: síncrono, para aplicar o modo antes da primeira pintura -->
+  <script src="assets/js/dsgovbr-bootstrapped-modo.js"></script>
+  <!-- web components de header e footer: defer, para os filhos já existirem ao montar -->
+  <script src="assets/js/dsgovbr-bootstrapped-componentes.js" defer></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+  <a class="visually-hidden-focusable" href="#conteudo">Ir para o conteúdo</a>
 
-  <header>
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <img class="logo-badge" src="logo.png" alt="" width="36" height="36">
-        <span>Abrasileirado</span>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#componentes">Componentes</a></li>
-          <li><a href="#arquitetura">Arquitetura</a></li>
-          <li><a href="https://github.com/abrasileirado" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <dsgovbr-header logo="logo.png" logo-alt="Página inicial do Abrasileirado" href="#"
+                  titulo="Abrasileirado" subtitulo="Ecossistema de bibliotecas e validações brasileiras" modo estatico>
+    <dsgovbr-acesso-rapido>
+      <dsgovbr-item href="#componentes">Componentes</dsgovbr-item>
+      <dsgovbr-item href="#arquitetura">Arquitetura</dsgovbr-item>
+      <dsgovbr-item href="https://github.com/abrasileirado" externo>GitHub</dsgovbr-item>
+    </dsgovbr-acesso-rapido>
+  </dsgovbr-header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-container">
-        <span class="hero-tag">Ecossistema Multi-Linguagem</span>
-        <h1>Validação e manipulação de dados brasileiros com simplicidade</h1>
-        <p>Bibliotecas, tipos de domínio e utilitários de alta performance para tratamento de CPF, CNPJ, CEP, Inscrição Estadual e conversão de dados DATASUS (DBC/DBF).</p>
-        <div class="hero-buttons">
+  <main id="conteudo" class="flex-grow-1">
+    <!-- Hero -->
+    <section class="bg-body-tertiary py-5">
+      <div class="container">
+        <span class="badge text-bg-primary mb-3">Ecossistema Multi-Linguagem</span>
+        <h1 class="display-5 fw-bold">Validação e manipulação de dados brasileiros com simplicidade</h1>
+        <p class="lead">Bibliotecas, tipos de domínio e utilitários de alta performance para tratamento de CPF, CNPJ, CEP, Inscrição Estadual e conversão de dados DATASUS (DBC/DBF).</p>
+        <div class="d-flex flex-wrap gap-2">
           <a href="#componentes" class="btn btn-primary">Explorar Componentes</a>
-          <a href="https://github.com/abrasileirado" class="btn btn-secondary" target="_blank" rel="noopener">Acessar no GitHub</a>
+          <a href="https://github.com/abrasileirado" class="btn btn-outline-primary" target="_blank" rel="noopener">Acessar no GitHub</a>
         </div>
       </div>
     </section>
 
-    <!-- Componentes Section -->
-    <section id="componentes">
-      <h2 class="section-title">Componentes da Suíte</h2>
-      <p class="section-subtitle">Conheça os módulos e bibliotecas mantidos pela organização Abrasileirado:</p>
+    <!-- Componentes -->
+    <section id="componentes" class="container py-5">
+      <h2>Componentes da Suíte</h2>
+      <p class="text-muted mb-4">Conheça os módulos e bibliotecas mantidos pela organização Abrasileirado:</p>
 
-      <h3 class="group-title">Bibliotecas de validação</h3>
-      <div class="grid">
-        <!-- Python -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">🐍</span>
-              <h3 class="card-title">python_abrasileirado</h3>
+      <h3 class="h4 border-bottom pb-2 mb-4">Bibliotecas de validação</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">🐍</span> python_abrasileirado</h4>
+              <p class="card-text">Biblioteca Python para validação, formação e geração de objetos de domínio brasileiros (CPF, CNPJ, CEP, etc.).</p>
+              <a href="https://abrasileirado.github.io/python_abrasileirado/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Biblioteca Python para validação, formação e geração de objetos de domínio brasileiros (CPF, CNPJ, CEP, etc.).</p>
           </div>
-          <a href="https://abrasileirado.github.io/python_abrasileirado/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
-        <!-- Django -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">🎯</span>
-              <h3 class="card-title">django_abrasileirado</h3>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">🎯</span> django_abrasileirado</h4>
+              <p class="card-text">Extensão para o framework Django contendo ModelFields e FormFields nativos para tipos de dados brasileiros.</p>
+              <a href="https://abrasileirado.github.io/django_abrasileirado/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Extensão para o framework Django contendo ModelFields e FormFields nativos para tipos de dados brasileiros.</p>
           </div>
-          <a href="https://abrasileirado.github.io/django_abrasileirado/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
-        <!-- PHP -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">🐘</span>
-              <h3 class="card-title">php_abrasileirado</h3>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">🐘</span> php_abrasileirado</h4>
+              <p class="card-text">Pacote PHP nativo com enums, exceptions e validações rigorosas para documentos e regras brasileiras.</p>
+              <a href="https://abrasileirado.github.io/php_abrasileirado/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Pacote PHP nativo com enums, exceptions e validações rigorosas para documentos e regras brasileiras.</p>
           </div>
-          <a href="https://abrasileirado.github.io/php_abrasileirado/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
-        <!-- Java -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">☕</span>
-              <h3 class="card-title">java_abrasileirado</h3>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">☕</span> java_abrasileirado</h4>
+              <p class="card-text">Biblioteca Java para integração em ambientes corporativos e ecossistema Spring/Java SE.</p>
+              <a href="https://abrasileirado.github.io/java_abrasileirado/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Biblioteca Java para integração em ambientes corporativos e ecossistema Spring/Java SE.</p>
           </div>
-          <a href="https://abrasileirado.github.io/java_abrasileirado/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
-        <!-- JavaScript -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">⚡</span>
-              <h3 class="card-title">javascript_abrasileirado</h3>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">⚡</span> javascript_abrasileirado</h4>
+              <p class="card-text">Validações e máscaras para aplicações Frontend (React, Vue, Angular) e Node.js backend.</p>
+              <a href="https://abrasileirado.github.io/javascript_abrasileirado/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Validações e máscaras para aplicações Frontend (React, Vue, Angular) e Node.js backend.</p>
           </div>
-          <a href="https://abrasileirado.github.io/javascript_abrasileirado/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
       </div>
 
-      <h3 class="group-title">Conversão DATASUS (DBC/DBF)</h3>
-      <div class="grid">
-        <!-- dbc2dbf -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">🦀</span>
-              <h3 class="card-title">dbc2dbf</h3>
+      <h3 class="h4 border-bottom pb-2 mt-5 mb-4">Conversão DATASUS (DBC/DBF)</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">🦀</span> dbc2dbf</h4>
+              <p class="card-text">Utilitário de linha de comando de altíssima velocidade escrito em Rust para descompactar arquivos DATASUS DBC em DBF.</p>
+              <a href="https://abrasileirado.github.io/dbc2dbf/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Utilitário de linha de comando de altíssima velocidade escrito em Rust para descompactar arquivos DATASUS DBC em DBF.</p>
           </div>
-          <a href="https://abrasileirado.github.io/dbc2dbf/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
-        <!-- blast-dbf -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">⚡</span>
-              <h3 class="card-title">blast-dbf</h3>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">⚡</span> blast-dbf</h4>
+              <p class="card-text">Biblioteca e utilitário CLI em C focado em descompactar e extrair dados de arquivos DBC/DBF com footprint mínimo de memória.</p>
+              <a href="https://abrasileirado.github.io/blast-dbf/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Biblioteca e utilitário CLI em C focado em descompactar e extrair dados de arquivos DBC/DBF com footprint mínimo de memória.</p>
           </div>
-          <a href="https://abrasileirado.github.io/blast-dbf/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
       </div>
 
-      <h3 class="group-title">Design System GOV.BR</h3>
-      <div class="grid">
-        <!-- dsgovbr-bootstrapped -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">🎨</span>
-              <h3 class="card-title">dsgovbr-bootstrapped</h3>
+      <h3 class="h4 border-bottom pb-2 mt-5 mb-4">Design System GOV.BR</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">🎨</span> dsgovbr-bootstrapped</h4>
+              <p class="card-text">Tema que aplica o Design System do Gov.BR (DSGovBR) estendendo o Bootstrap, aproveitando apenas os tokens do DSGovBR.</p>
+              <a href="https://abrasileirado.github.io/dsgovbr-bootstrapped/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Tema que aplica o Design System do Gov.BR (DSGovBR) estendendo o Bootstrap, aproveitando apenas os tokens do DSGovBR.</p>
           </div>
-          <a href="https://abrasileirado.github.io/dsgovbr-bootstrapped/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
-
-        <!-- dsgovbr-sphinx-theme -->
-        <div class="card">
-          <div>
-            <div class="card-header">
-              <span class="card-icon">📚</span>
-              <h3 class="card-title">dsgovbr-sphinx-theme</h3>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title h5"><span aria-hidden="true">📚</span> dsgovbr-sphinx-theme</h4>
+              <p class="card-text">Tema Sphinx não oficial inspirado no Design System GOV.BR (DSGovBR) para documentações técnicas.</p>
+              <a href="https://abrasileirado.github.io/dsgovbr-sphinx-theme/" class="mt-auto stretched-link" target="_blank" rel="noopener">Ver documentação &rarr;</a>
             </div>
-            <p class="card-description">Tema Sphinx não oficial inspirado no Design System GOV.BR (DSGovBR) para documentações técnicas.</p>
           </div>
-          <a href="https://abrasileirado.github.io/dsgovbr-sphinx-theme/" class="card-link" target="_blank">Ver documentação &rarr;</a>
         </div>
       </div>
     </section>
 
     <!-- Arquitetura -->
-    <section id="arquitetura">
-      <h2 class="section-title">Arquitetura da Organização</h2>
-      <p class="section-subtitle">Visão geral do padrão de repositórios e segregação de responsabilidades:</p>
+    <section id="arquitetura" class="container pb-5">
+      <h2>Arquitetura da Organização</h2>
+      <p class="text-muted mb-4">Visão geral do padrão de repositórios e segregação de responsabilidades:</p>
 
-      <div class="card" style="margin-top: 1rem;">
-        <p style="color: var(--text-muted);">
-          A organização <strong>Abrasileirado</strong> é mantida sob um modelo modular onde cada repositório atende a uma linguagem ou responsabilidade específica. 
-          O desenvolvimento local é centralizado no repositório privado <code>workspace</code>, garantindo que o ambiente Docker e os atalhos de desenvolvimento não poluam o código-fonte público de cada biblioteca.
-        </p>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            A organização <strong>Abrasileirado</strong> é mantida sob um modelo modular onde cada repositório atende a uma linguagem ou responsabilidade específica.
+            O desenvolvimento local é centralizado no repositório privado <code>workspace</code>, garantindo que o ambiente Docker e os atalhos de desenvolvimento não poluam o código-fonte público de cada biblioteca.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="hero-container">
-      <p>© 2026 Organização Abrasileirado. Código aberto sob licença MIT.</p>
-      <p style="margin-top: 0.5rem;"><a href="https://github.com/abrasileirado">github.com/abrasileirado</a></p>
-    </div>
-  </footer>
+  <dsgovbr-footer logo="logo.png" logo-alt="Logo do Abrasileirado">
+    <dsgovbr-coluna titulo="Abrasileirado">
+      <dsgovbr-item href="#componentes">Componentes</dsgovbr-item>
+      <dsgovbr-item href="#arquitetura">Arquitetura</dsgovbr-item>
+      <dsgovbr-item href="https://github.com/abrasileirado" externo>GitHub</dsgovbr-item>
+    </dsgovbr-coluna>
+    <dsgovbr-aviso>© 2026 Organização Abrasileirado. Código aberto sob licença <strong>MIT</strong>. Site construído com o tema dsgovbr-bootstrapped, projeto comunitário e não oficial, sem endosso do GOV.BR DS ou do Governo Federal.</dsgovbr-aviso>
+  </dsgovbr-footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
